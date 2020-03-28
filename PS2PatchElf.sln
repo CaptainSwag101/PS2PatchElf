@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS2PatchLib", "PS2PatchLib\PS2PatchLib.csproj", "{8F57CE36-5591-4EC9-BA14-2B47CDBF88B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS2PatchElf", "PS2PatchElf\PS2PatchElf.csproj", "{930653CC-5EDA-4414-9889-68D538283DB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F57CE36-5591-4EC9-BA14-2B47CDBF88B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F57CE36-5591-4EC9-BA14-2B47CDBF88B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F57CE36-5591-4EC9-BA14-2B47CDBF88B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F57CE36-5591-4EC9-BA14-2B47CDBF88B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{930653CC-5EDA-4414-9889-68D538283DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{930653CC-5EDA-4414-9889-68D538283DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{930653CC-5EDA-4414-9889-68D538283DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{930653CC-5EDA-4414-9889-68D538283DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65A05A4E-FF0B-47F4-9CCF-26565B2E2E82}
+	EndGlobalSection
+EndGlobal
