@@ -10,6 +10,12 @@ namespace PS2PatchElf
         static void Main(string[] args)
         {
             // PS2PatchElf by CaptainSwag101
+            if (args.Length != 2)
+            {
+                Console.WriteLine("Improper number of arguments specified.");
+                return;
+            }
+            
             Elf? originalElf = ElfUtils.ParseElf(args[0]);
 
             // Final catch-all sanity check to ensure the ELF/SLUS file is valid
