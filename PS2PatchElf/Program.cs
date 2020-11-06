@@ -27,6 +27,7 @@ namespace PS2PatchElf
                 Console.WriteLine($"ERROR: The file {args[1]} does not have a .pnach file extension.");
                 return;
             }
+
             List<PnachCheat> cheatList = PnachUtils.ParseCheatFile(args[1]);
 
             foreach (PnachCheat cheat in cheatList)

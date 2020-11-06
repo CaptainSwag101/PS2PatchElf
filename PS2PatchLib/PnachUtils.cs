@@ -28,7 +28,8 @@ namespace PS2PatchLib
                 if (!line.StartsWith("patch"))
                     continue;
 
-                string[] splitLine = line.Split(',', StringSplitOptions.RemoveEmptyEntries);
+                string preComment = line.Split("//")[0];
+                string[] splitLine = preComment.Split(',', StringSplitOptions.RemoveEmptyEntries);
 
                 PnachCheat cheat;
                 cheat.Address = uint.Parse(splitLine[2], System.Globalization.NumberStyles.HexNumber);
