@@ -12,7 +12,7 @@ namespace PS2PatchElf
             // PS2PatchElf by CaptainSwag101
             if (args.Length != 2)
             {
-                Console.WriteLine("Improper number of arguments specified.");
+                Console.WriteLine("Improper number of arguments specified.\nPlease pass an ELF/SLUS and a PNACH file, in that order!");
                 return;
             }
             
