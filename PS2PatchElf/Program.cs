@@ -10,9 +10,9 @@ namespace PS2PatchElf
         static void Main(string[] args)
         {
             // PS2PatchElf by CaptainSwag101
-            if (args.Length != 2)
+            if (args.Length < 2 || args.Length > 3)
             {
-                Console.WriteLine("Improper number of arguments specified.\nPlease pass an ELF/SLUS and a PNACH file, in that order!");
+                Console.WriteLine("Improper number of arguments specified.\nPlease pass an input ELF/SLUS, a PNACH file, and optionally the patched ELF/SLUS's output path, in that order!");
                 return;
             }
             
@@ -94,7 +94,12 @@ namespace PS2PatchElf
                 }
             }
 
-            File.WriteAllBytes(args[0] + "_patchedElf", patchedElf.RawData);
+            // Configure output file path
+            string outputPath = args[0] + "_patchedElf";
+            if (args.Length == 3)
+                outputPath = args[2];
+
+            File.WriteAllBytes(outputPath, patchedElf.RawData);
         }
     }
 }

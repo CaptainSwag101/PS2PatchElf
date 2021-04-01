@@ -21,7 +21,7 @@ namespace PS2PatchLib
             List<PnachCheat> cheatList = new List<PnachCheat>();
 
             using StreamReader reader = new StreamReader(pnachPath);
-            string line;
+            string? line;
             while ((line = reader.ReadLine()?.ToLowerInvariant()) != null)
             {
                 // We only care about cheat lines
