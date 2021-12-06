@@ -66,7 +66,7 @@ namespace PS2PatchLib
             Elf elf;
 
             elf.RawData = File.ReadAllBytes(elfPath);
-            using BinaryReader reader = new BinaryReader(new FileStream(elfPath, FileMode.Open));
+            using BinaryReader reader = new(new FileStream(elfPath, FileMode.Open));
 
             // Read ELF header identifier
             elf.Header.Identifier.Magic = new ASCIIEncoding().GetString(reader.ReadBytes(4));
@@ -108,7 +108,7 @@ namespace PS2PatchLib
             elf.Header.SHStrTblIndex = reader.ReadUInt16();
 
             // Read Program headers
-            elf.ProgramHeaders = new List<Elf.ProgramHeader>();
+            elf.ProgramHeaders = new();
             for (int ph = 0; ph < elf.Header.PHNum; ++ph)
             {
                 Elf.ProgramHeader pHeader;

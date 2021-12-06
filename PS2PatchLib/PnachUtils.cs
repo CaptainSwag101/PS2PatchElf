@@ -18,9 +18,9 @@ namespace PS2PatchLib
     {
         public static List<PnachCheat> ParseCheatFile(string pnachPath)
         {
-            List<PnachCheat> cheatList = new List<PnachCheat>();
+            List<PnachCheat> cheatList = new();
 
-            using StreamReader reader = new StreamReader(pnachPath);
+            using StreamReader reader = new(pnachPath);
             string? line;
             while ((line = reader.ReadLine()?.ToLowerInvariant()) != null)
             {
