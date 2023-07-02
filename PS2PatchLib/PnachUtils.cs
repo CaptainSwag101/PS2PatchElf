@@ -22,7 +22,7 @@ namespace PS2PatchLib
 
             using StreamReader reader = new(pnachPath);
             string? line;
-            while ((line = reader.ReadLine()?.ToLowerInvariant()) != null)
+            while ((line = reader.ReadLine()?.ToLowerInvariant()) is not null)
             {
                 // We only care about cheat lines
                 if (!line.StartsWith("patch"))

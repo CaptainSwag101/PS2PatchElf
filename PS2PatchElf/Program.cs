@@ -9,8 +9,7 @@ namespace PS2PatchElf
     {
         static void Main(string[] args)
         {
-            // PS2PatchElf by CaptainSwag101
-            if (args.Length < 2 || args.Length > 3)
+            if (args.Length is not 2 or 3)
             {
                 Console.WriteLine("Improper number of arguments specified.\nPlease pass an input ELF/SLUS, a PNACH file, and optionally the patched ELF/SLUS's output path, in that order!");
                 return;
@@ -19,7 +18,7 @@ namespace PS2PatchElf
             Elf? originalElf = ElfUtils.ParseElf(args[0]);
 
             // Final catch-all sanity check to ensure the ELF/SLUS file is valid
-            if (originalElf == null)
+            if (originalElf is null)
             {
                 Console.WriteLine("Something went wrong while loading the ELF file.");
                 return;

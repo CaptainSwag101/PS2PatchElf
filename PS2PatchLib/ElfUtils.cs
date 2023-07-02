@@ -129,7 +129,7 @@ namespace PS2PatchLib
             elf.SectionHeaders = new List<Elf.SectionHeader>();
             for (int sh = 0; sh < elf.Header.SHNum; ++sh)
             {
-
+                // We ignore these, I don't think they are necessary for PS2 ELF patching.
             }
 
             return elf;
