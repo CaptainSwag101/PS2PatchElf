@@ -9,7 +9,7 @@ namespace PS2PatchElf
     {
         static void Main(string[] args)
         {
-            if (args.Length is not 2 or 3)
+            if (args.Length != 2 && args.Length != 3)
             {
                 Console.WriteLine("Improper number of arguments specified.\nPlease pass an input ELF/SLUS, a PNACH file, and optionally the patched ELF/SLUS's output path, in that order!");
                 return;
